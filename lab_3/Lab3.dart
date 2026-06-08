@@ -1,14 +1,15 @@
 import 'dart:async';
 
 Future<void> main() async {
-  await exercise1();
-  await exercise2();
-  exercise3();
-  await Future.delayed(Duration.zero);
-  await exercise4();
+  // await exercise1();
+  // await exercise2();
+  // exercise3();
+  // await Future.delayed(Duration.zero);
+  // await exercise4();
   exercise5();
 }
 
+/*
 class Product {
   final int id;
   final String name;
@@ -36,6 +37,7 @@ Future<void> exercise1() async {
   repo.add(Product(4, 'Webcam', 30.0));
   await Future.delayed(Duration.zero);
   repo.dispose();}
+
 class User {
   final String name;
   final String email;
@@ -63,34 +65,35 @@ Future<void> exercise2() async {
     print(u);
   }
 }
+  */
 
-void exercise3() {
-  print('--- Exercise 3 ---');
+// void exercise3() {
+//   print('--- Exercise 3 ---');
+//
+//   print('1. Bắt đầu (đồng bộ)');
+//
+//   Future(() => print('4. Future (event queue)'));
+//
+//   scheduleMicrotask(() => print('3. Microtask'));
+//
+//   print('2. Kết thúc (đồng bộ)');
+// }
 
-  print('1. Bắt đầu (đồng bộ)');
-
-  Future(() => print('4. Future (event queue)'));
-
-  scheduleMicrotask(() => print('3. Microtask'));
-
-  print('2. Kết thúc (đồng bộ)');
-}
-
-Future<void> exercise4() async {
-  print('--- Exercise 4 ---');
-
-  // Tạo stream các số 1..5
-  final numbers = Stream.fromIterable([1, 2, 3, 4, 5]);
-
-  final result = numbers
-      .map((n) => n * n)        // biến mỗi số thành bình phương: 1,4,9,16,25
-      .where((sq) => sq.isEven); // chỉ giữ số chẵn: 4, 16
-
-  // await for: lặp qua từng giá trị stream phát ra
-  await for (final value in result) {
-    print('Giá trị: $value');
-  }
-}
+// Future<void> exercise4() async {
+//   print('--- Exercise 4 ---');
+//
+//   // Tạo stream các số 1..5
+//   final numbers = Stream.fromIterable([1, 2, 3, 4, 5]);
+//
+//   final result = numbers
+//       .map((n) => n * n)        // biến mỗi số thành bình phương: 1,4,9,16,25
+//       .where((sq) => sq.isEven); // chỉ giữ số chẵn: 4, 16
+//
+//   // await for: lặp qua từng giá trị stream phát ra
+//   await for (final value in result) {
+//     print('Giá trị: $value');
+//   }
+// }
 
 class Settings {
   String theme;
